@@ -1,0 +1,88 @@
+$primary-color: #ffc107; 
+$primary-dark: #e0a800;
+$text-color: #333;       
+$border-color: #ccc;     
+$error-color: #ff4d4d;
+
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-title {
+  font-size: 2rem;
+  color: $text-color;
+  margin-bottom: 0.5rem;
+}
+
+.registration-subtitle {
+  font-size: 1rem;
+  color: darken($text-color, 20%);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.registration-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 0.9rem;
+    color: $text-color;
+    margin-bottom: 0.3rem;
+  }
+
+  input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  .sign-up-btn {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+
+  .terms-text {
+    font-size: 0.8rem;
+    color: darken($text-color, 20%);
+    text-align: center;
+    margin-top: 1rem;
+
+    a {
+      color: $primary-dark;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
