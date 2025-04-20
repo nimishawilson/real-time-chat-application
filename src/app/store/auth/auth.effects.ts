@@ -38,6 +38,17 @@ export class AuthEffects {
     )
   );
 
+  redirectAfterLogin$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(loginSuccess),
+        tap(() => {
+          this.router.navigate(['/home']); 
+        })
+      ),
+    { dispatch: false }
+  );
+  
   logout$ = createEffect(
     () =>
       this.actions$.pipe(
