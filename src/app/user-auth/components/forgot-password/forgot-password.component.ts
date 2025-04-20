@@ -9,5 +9,8 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class ForgotPasswordComponent {
+  onSubmit(onSubmit: any) {
+    throw new Error('Method not implemented.');
+  }
 
 }
